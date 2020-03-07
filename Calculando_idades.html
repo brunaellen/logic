@@ -2,26 +2,26 @@
 
 <script>
 
-    var ano = 2020;
-    var nascimento1=1993;
-    var nascimento2=1986;
-    var nascimento3=1966;
+var ano = 2020;
+var nascimento1 = 1993;
+var nascimento2 = 1986;
+var nascimento3 =1966;
     
-    var idadeBruna = ano - nascimento1; 
+var idadeBruna = ano - nascimento1;
+var idadeJoão = ano - nascimento2;  
 
 
-    document.write("Bruna tem " + (idadeBruna) + " anos");
-    document.write("<br>");
-    document.write("João tem " + (ano - nascimento2) + " anos");
-    document.write("<br>");
+document.write("Bruna tem " + (idadeBruna) + " anos");
+document.write("<br>");
+document.write("João tem " + (idadeJoão) + " anos");
+document.write("<br>");
 
-     ano=2019;
-     var idadeMargarete = ano-nascimento3;
-     document.write("Margarete tem " + (ano - nascimento3) + " anos");
-     document.write("<br>");
+var idadeMargarete = ano - nascimento3;
 
- 
-     var media = ((ano - nascimento1) + (ano - nascimento2) + (ano - nascimento3) ) / 3;
-      document.write( " A média das variáveis é = " + Math.round(media));
+document.write("Margarete tem " + (idadeMargarete) + " anos");
+document.write("<br>");
+
+var media = ((idadeBruna) + (idadeJoão) + (idadeMargarete) ) / 3;
+document.write( " A média das idades é = " + Math.round(media));
 
 </script>
