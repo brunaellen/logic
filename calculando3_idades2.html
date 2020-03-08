@@ -1,0 +1,27 @@
+<meta charset = "UTF-8">
+
+<script>
+
+    function mostrar(frase) {
+        document.write(frase);
+    }
+
+    var ano = 2020
+    var nascimento1 = 1993;
+    var nascimento2 = 1986;
+    var nascimento3 =1966;
+    var idadeBruna = ano - nascimento1;
+    var idadeJoão = ano - nascimento2;
+
+    mostrar("Bruna tem " + (idadeBruna) + " anos" + "<br>");
+    mostrar("João tem " + (idadeJoão) + " anos" + "<br>");
+
+    ano = 2019;
+    var idadeMargarete = ano - nascimento3;
+
+    mostrar("Margarete tem " + (idadeMargarete) + " anos" + "<br>");
+
+    var media = ((idadeBruna) + (idadeJoão) + (idadeMargarete) ) / 3;
+    mostrar(" A média das idades é = " + Math.round(media));
+
+</script>
