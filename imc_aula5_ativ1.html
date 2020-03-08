@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function imc (pesoDaPessoa, alturaDaPessoa){
+        var imc = pesoDaPessoa / (alturaDaPessoa*alturaDaPessoa);
+        mostrar ("<br>O imc é: " + imc);
+    }
+
+    function mostrar (frase) {
+        document.write(frase);
+    }
+
+    imc(90, 1.70);
+    imc(60, 1.50);
+
+</script>
