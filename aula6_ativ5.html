@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostrar(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function pontuacaoTotal(vitorias, empates){
+        var total = vitorias + empates;
+        return total;
+    }
+
+    function calculaPontuacao(ano) {
+        
+        var vitorias = parseInt(prompt(" para o ano " + ano + ", informe o número de vitórias do seu time "));
+        var empates = parseInt(prompt(" para o ano " + ano + ", informe o número de empates do seu time "));
+        var pontuacaoVitorias1 = vitorias*3;
+        var pontuacaoEmpates1 = empates*1;
+        var pontuacaoTotal1 = pontuacaoTotal(pontuacaoVitorias1, pontuacaoEmpates1);
+        
+        return pontuacaoTotal1;
+    }
+
+    var ano1 = prompt("informe o ano");
+    var pontuacaoTotal1 = calculaPontuacao(ano1)
+
+    var ano2 = prompt("informe o ano");
+    var pontuacaoTotal2 = calculaPontuacao(ano2)
+
+    mostrar(" A pontuação total do seu time em " + ano1 + " é " + pontuacaoTotal1);
+    mostrar(" A pontuação total do seu time em " + ano2 + " é " + pontuacaoTotal2);
+
+    if (pontuacaoTotal2 > pontuacaoTotal1){
+        mostrar(" Em " + ano2 + " a pontuação do seu time está melhor do que no ano de " + ano1);
+    }
+    if (pontuacaoTotal2 < pontuacaoTotal1){
+        mostrar(" Em " + ano2 + " o seu time teve uma pontuação menor do que no ano de " + ano1);
+    } 
+    if (pontuacaoTotal2 == pontuacaoTotal1){
+        mostrar(" Comparando os anos " + ano1 + " e " + ano2 + " o seu time obteve a mesma pontuação ");
+    }
+</script>
