@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+    function mostra(frase){
+        document.write(frase);
+        document.write("<br>")
+    }
+
+    function sorteia(n){
+        sorteia = Math.round(Math.random()*n);
+        return sorteia;
+    }
+
+    var numeroPensado = sorteia(100);
+    var chute = parseInt(prompt(" Já pensei em um número. Qual você acha que é? "));
+
+    if (chute == numeroPensado){
+        mostra(" Você acertou, pois o número que pensei foi " + numeroPensado);
+    } else {
+        mostra(" você não acertou, o número que pensei foi " + numeroPensado);
+    if (chute > numeroPensado){
+        mostra(" o numéro que você chutou é maior que o número que eu pensei!")
+    } else {
+        mostra(" o número que você chutou é menor do que o número que pensei!")
+    }
+    }
+</script>
