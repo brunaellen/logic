@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function mostra(frase){
+        document.write(frase);
+        document.write("<br>");
+    }
+
+    var criarUsuario = prompt(" crie o seu usuário digitando um nome de sua preferência ");
+    var criarSenha = prompt("crie seu usuário digitando 5 caracteres ");
+    var loginUsuario = prompt(" digite o nome do seu usuário ");
+    var loginSenha = prompt(" digite sua senha ");
+    var numeroDeTentativasAtuais = 1;
+    var numeroMaximoDeTentativas = 3;
+
+    if (criarUsuario == loginUsuario && criarSenha == loginSenha){
+        mostra(" Sejs bem vindo ao sistema " + criarUsuario);
+    } else{
+        if (criarUsuario != loginUsuario){
+            alert(" usuário inválido, tente novamente");
+            prompt(" digite o nome do seu usuário novamente");
+        } if (criarSenha != loginSenha){
+            alert(" senha inválida, tente novamente");
+            prompt(" digite sua senha novamente");
+        }
+    }
+    while (criarUsuario != loginUsuario && numeroDeTentativasAtuais <= numeroMaximoDeTentativas){
+        alert(" usuário inválido, tente novamente");
+        prompt(" digite o nome do seu usuário novamente");
+        numeroDeTentativasAtuais = numeroDeTentativasAtuais+1;
+    }
+    
+    while(criarSenha != loginSenha && numeroDeTentativasAtuais <= numeroMaximoDeTentativas){
+        alert(" senha inválida, tente novamente");
+        prompt(" digite sua senha novamente");
+        numeroDeTentativasAtuais = numeroDeTentativasAtuais+1;
+    }
+    if (numeroDeTentativasAtuais>numeroMaximoDeTentativas){
+            alert("voce excedeu o número de tentativas, tente novamente em alguns minutos! ");
+        }
+
+</script>

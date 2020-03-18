@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+  //É comum programas terem uma tela de login(usuário e senha).
+  function mostra(frase){
+      document.write(frase);
+      document.write("<br>");
+  }
+
+  var criarUsuario = prompt("digite o seu usuário ");
+  var login = prompt("digite o seu login ");
+
+  var quantidadeMaximaDeTentativas = 3;
+  var quantidadeAtualDeTentativas = 1;
+
+  while (login!=criarUsuario && quantidadeAtualDeTentativas <= quantidadeMaximaDeTentativas){
+    login = prompt(" Acesso negado, digite o seu login novamente ");
+    quantidadeAtualDeTentativas = quantidadeAtualDeTentativas + 1;  
+  }
+  if (login==criarUsuario) {
+    mostra( "acertou mizeravi");
+  }else {
+      if (quantidadeAtualDeTentativas>=quantidadeMaximaDeTentativas) {
+          alert(" suas tentativas de logar acabaram, tente novamente em alguns minutos! ")
+    }
+  }  
+</script>
