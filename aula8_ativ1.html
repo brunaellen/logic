@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<input/> 
+<button> compare com o número que escolhi </button>
+
+<script>
+
+var numeroEscolhido = 5;
+var input = document.querySelector (" input ");
+input.focus();
+
+function verifica () {
+    if (input.value == numeroEscolhido) {
+        alert("Você ACERTOU!");
+    } else {
+        alert("Você ERROU!!!!!!!!");
+    }
+
+    input.value = ""; //serve para limpar a caixa de texto!
+    input.focus(); //serve para a caixa de texto ficar em evidência!
+}
+
+var button = document.querySelector("button");
+
+button.onclick = verifica;
+
+</script>

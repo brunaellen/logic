@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 
 <script>
+    
     function mostra(frase){
         document.write(frase);
         document.write("<br>")
@@ -14,7 +15,6 @@
 
     var numeroPensado = sorteia(100);
     var chute = 0;
-
     var tentativas = 1;
 
     while(tentativas <= 3){
@@ -27,7 +27,7 @@
 
         if (chute == numeroPensado){
             mostra(" Você acertou, pois o número que pensei foi " + numeroPensado);
-            break;
+            break; //serve para quebrar a funcao!
         } else {
             mostra(" você não acertou, o número que pensei foi " + numeroPensado);
             if (chute > numeroPensado){
